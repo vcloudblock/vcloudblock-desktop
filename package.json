@@ -1,5 +1,5 @@
 {
-  "name": "openblock-desktop",
+  "name": "vcloudblock-desktop",
   "productName": "OpenBlockDesktop",
   "description": "OpenBlock as a self-contained desktop application",
   "author": "Openblock.cc Team <contact@openblock.cc> (http://www.openblock.cc/)",
@@ -9,13 +9,13 @@
     "postinstall": "electron-builder install-app-deps",
     "clean": "rimraf ./dist ./static ./external-resources ./tools ./translations ./firmwares ./drivers",
     "i18n:src": "mkdirp translations/core && format-message extract --out-file translations/core/en.json src/main/**.js",
-    "i18n:push": "tx-push-src openblock-editor desktop translations/core/en.json",
+    "i18n:push": "tx-push-src vcloudblock-editor desktop translations/core/en.json",
     "start": "mkdirp ./dist && electron-webpack dev --bail --display-error-details --env.minify=false --no-progress",
     "compile": "mkdirp ./dist && electron-webpack --bail --display-error-details --env.minify=false --no-progress",
     "fetch:drivers": "rimraf ./drivers && node scripts/download-driver.js",
-    "fetch:exts": "rimraf ./external-resources && node ./node_modules/openblock-resource/script/download.js  --repo=openblockcc/external-resources-v3",
-    "fetch:firmwares": "rimraf ./firmwares && node ./node_modules/openblock-link/script/download-firmwares.js",
-    "fetch:tools": "rimraf ./tools && node ./node_modules/openblock-link/script/download-tools.js",
+    "fetch:exts": "rimraf ./external-resources && node ./node_modules/vcloudblock-resource/script/download.js  --repo=vcloudblock/external-resources-v3",
+    "fetch:firmwares": "rimraf ./firmwares && node ./node_modules/vcloudblock-link/script/download-firmwares.js",
+    "fetch:tools": "rimraf ./tools && node ./node_modules/vcloudblock-link/script/download-tools.js",
     "fetch:static": "rimraf ./static && mkdirp ./static && git clone https://github.com/openblockcc/openblock-assets.git static && rimraf ./static/.git",
     "fetch:all": "npm run fetch:drivers && npm run fetch:exts && npm run fetch:firmwares && npm run fetch:tools && npm run fetch:static",
     "build": "npm run build:dev",
@@ -31,12 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/openblockcc/openblock-desktop.git"
+    "url": "git+ssh://git@github.com/vcloudblock/vcloudblock-desktop.git"
   },
   "dependencies": {
     "bytes": "^3.1.2",
-    "openblock-link": "^0.2.0-prerelease.20240710015813",
-    "openblock-resource": "^0.2.0-prerelease.20240708150142",
+    "vcloudblock-link": "file://D:/vcloudblock/locallibs/vcloudblock-link-0.2.0.tgz",
+    "vcloudblock-resource": "file://D:/vcloudblock/locallibs/vcloudblock-resource-0.2.0.tgz",
     "postinstall": "^0.7.4",
     "source-map-support": "^0.5.19"
   },
@@ -55,6 +55,7 @@
     "babel-plugin-react-intl": "^7.5.7",
     "classnames": "^2.3.1",
     "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^5.2.7",
     "download-github-release": "^0.3.2",
     "electron": "^15.3.1",
     "electron-builder": "^22.14.13",
@@ -81,9 +82,6 @@
     "monaco-editor-webpack-plugin": "^1.7.0",
     "nets": "^3.2.0",
     "node-abort-controller": "^3.0.1",
-    "openblock-gui": "github:openblockcc/openblock-gui#openblock-desktop-v2.5.2",
-    "openblock-l10n": "^3.15.20240704111820",
-    "openblock-parse-release-message": "0.0.4",
     "os-locale": "^5.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
@@ -93,6 +91,9 @@
     "rimraf": "^3.0.2",
     "sudo-prompt": "^9.2.1",
     "uuid": "^8.3.2",
+    "vcloudblock-gui": "file://D:/vcloudblock/locallibs/vcloudblock-gui-0.1.0.tgz",
+    "vcloudblock-l10n": "file://D:/vcloudblock/locallibs/vcloudblock-l10n-3.15.0.tgz",
+    "vcloudblock-parse-release-message": "file://D:/vcloudblock/locallibs/vcloudblock-parse-release-message-0.0.4.tgz",
     "webpack": "^4.43.0"
   }
 }

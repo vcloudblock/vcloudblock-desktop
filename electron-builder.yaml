@@ -3,15 +3,15 @@ directories:
   output: dist
 extraFiles: ['LICENSE', 'LICENSE.ScratchFoundation', 'TRADEMARK', "tools", "external-resources", 'firmwares', "drivers"]
 
-appId: openblock.cc.openblock-desktop
-productName: "OpenBlockDesktop"
+appId: vcloudblock.vcloudblock-desktop
+productName: "VCloudBlockDesktop"
 publish:
   - provider: github
-artifactName: "OpenBlock-Desktop_v${version}_${os}_${arch}.${ext}"
+artifactName: "VCloudBlock-Desktop_v${version}_${os}_${arch}.${ext}"
 
 fileAssociations:
   ext: ob
-  name: OpenBlock project file
+  name: VCloudBlock project file
   role: Editor
   icon: buildResources/OpenBlockFile.ico
 
@@ -31,7 +31,7 @@ mac:
     - dmg
     # - mas
 dmg:
-  title: "OpenBlock-Desktop_${version}"
+  title: "VCloudBlock-Desktop_${version}"
 # mas:
 #   category: public.app-category.education
 #   entitlements: buildResources/entitlements.mas.plist
@@ -62,7 +62,7 @@ linux:
   icon: buildResources/linux
   desktop:
     - Encoding: UTF-8
-    - Name: OpenBlockDesktop
+    - Name: VCloudBlockDesktop
     - Icon: openblock-desktop
     - Type: Application
     - Terminal: false

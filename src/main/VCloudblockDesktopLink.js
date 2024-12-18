@@ -7,8 +7,8 @@ import fs from 'fs-extra';
 import sudo from 'sudo-prompt';
 import {productName} from '../../package.json';
 
-import OpenBlockLink from 'openblock-link';
-import OpenblockResourceServer from 'openblock-resource';
+import OpenBlockLink from 'vcloudblock-link';
+import OpenblockResourceServer from 'vcloudblock-resource';
 
 class OpenblockDesktopLink {
     constructor () {

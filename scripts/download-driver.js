@@ -4,8 +4,8 @@ const path = require('path');
 const os = require('os');
 const fs = require('fs');
 
-const user = 'openblockcc';
-const repo = 'openblock-driver';
+const user = 'vcloudblock';
+const repo = 'vcloudblock-driver';
 const outputdir = path.join(__dirname, '../drivers');
 const leaveZipped = false;
 

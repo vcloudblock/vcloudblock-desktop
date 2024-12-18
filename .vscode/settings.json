@@ -1,0 +1,7 @@
+{
+    "i18n-ally.localesPaths": [
+        "translations/messages",
+        "tools/Python/Tools/i18n",
+        "tools/Arduino/packages/Maixduino/tools/riscv64-unknown-elf-gcc/8.2.0_20190409/share/locale"
+    ]
+}
