@@ -63,12 +63,12 @@ const loadFilters = {
         ]
     },
     AllProjects: {
-        name: 'All OpenBlock Projects',
+        name: 'All VCloudBlock Projects',
         extensions: [
-            ...saveFilters.SB3.extensions,
             ...saveFilters.SB2.extensions,
             ...saveFilters.SB.extensions,
-            ...saveFilters.OB.extensions
+            ...saveFilters.OB.extensions,
+            ...saveFilters.SB3.extensions
         ]
     },
     AllSounds: {

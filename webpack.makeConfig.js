@@ -138,7 +138,7 @@ const makeConfig = function (defaultConfig, options) {
             alias: {
                 // act like scratch-gui has this line in its package.json:
                 //   "browser": "./src/index.js"
-                'openblock-gui$': path.resolve(__dirname, 'node_modules', 'openblock-gui', 'src', 'index.js')
+                'vcloudblock-gui$': path.resolve(__dirname, 'node_modules', 'vcloudblock-gui', 'src', 'index.js')
             }
         }
     });

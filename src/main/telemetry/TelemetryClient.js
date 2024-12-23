@@ -21,7 +21,7 @@ import {
   */
 const TelemetryServerURL = Object.freeze({
     staging: '',
-    production: 'https://telemetry.openblock.cc/'
+    production: 'https://github.com/vcloudblock/vcloudblock-wiki'
 });
 const DefaultServerURL = (
     process.env.NODE_ENV === 'production' ? TelemetryServerURL.production : TelemetryServerURL.staging

@@ -7,10 +7,10 @@ import fs from 'fs-extra';
 import sudo from 'sudo-prompt';
 import {productName} from '../../package.json';
 
-import OpenBlockLink from 'vcloudblock-link';
-import OpenblockResourceServer from 'vcloudblock-resource';
+import VCloudBlockLink from 'vcloudblock-link';
+import VCloudBlockResourceServer from 'vcloudblock-resource';
 
-class OpenblockDesktopLink {
+class VCloudBlockDesktopLink {
     constructor () {
         this._resourceServer = null;
 
@@ -31,8 +31,8 @@ class OpenblockDesktopLink {
         );
         this.dataPath = path.join(userDataPath, 'Data');
 
-        this._link = new OpenBlockLink(this.dataPath, path.join(this.appPath, 'tools'));
-        this._resourceServer = new OpenblockResourceServer(this.dataPath,
+        this._link = new VCloudBlockLink(this.dataPath, path.join(this.appPath, 'tools'));
+        this._resourceServer = new VCloudBlockResourceServer(this.dataPath,
             path.join(this.appPath, 'external-resources'),
             app.getLocaleCountryCode());
     }
@@ -79,4 +79,4 @@ class OpenblockDesktopLink {
     }
 }
 
-export default OpenblockDesktopLink;
+export default VCloudBlockDesktopLink;

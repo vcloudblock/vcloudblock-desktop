@@ -107,16 +107,16 @@ const ScratchDesktopGUIHOC = function (WrappedComponent) {
             ipcRenderer.send('open-about-window');
         }
         handleClickLicense () {
-            ipcRenderer.send('open-license-window');
+            // ipcRenderer.send('open-license-window');
         }
         handleClickCheckUpdate () {
-            ipcRenderer.send('reqeustCheckUpdate');
+            // ipcRenderer.send('reqeustCheckUpdate');
         }
         handleClickUpdate () {
-            ipcRenderer.send('reqeustUpdate');
+            // ipcRenderer.send('reqeustUpdate');
         }
         handleAbortUpdate () {
-            ipcRenderer.send('abortUpdate');
+            // ipcRenderer.send('abortUpdate');
         }
         handleClickClearCache () {
             ipcRenderer.send('clearCache');

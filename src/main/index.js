@@ -76,7 +76,7 @@ const displayPermissionDeniedWarning = (browserWindow, permissionType) => {
         message = formatMessage({
             id: 'index.cameraPermissionDeniedMessage',
             default: 'Permission to use the camera has been denied. ' +
-                'OpenBlock will not be able to take a photo or use video sensing blocks.',
+                'VCloudBlock will not be able to take a photo or use video sensing blocks.',
             description: 'message for camera permission denied'
         });
         break;
@@ -89,7 +89,7 @@ const displayPermissionDeniedWarning = (browserWindow, permissionType) => {
         message = formatMessage({
             id: 'index.microphonePermissionDeniedMessage',
             default: 'Permission to use the microphone has been denied. ' +
-                    'OpenBlock will not be able to record sounds or detect loudness.',
+                    'VCloudBlock will not be able to record sounds or detect loudness.',
             description: 'message for microphone permission denied'
         });
         break;
@@ -111,14 +111,14 @@ const displayPermissionDeniedWarning = (browserWindow, permissionType) => {
     case 'darwin':
         instructions = formatMessage({
             id: 'index.darwinPermissionDeniedInstructions',
-            default: 'To change OpenBlock permissions, please check "Security & Privacy" in System Preferences.',
+            default: 'To change VCloudBlock permissions, please check "Security & Privacy" in System Preferences.',
             description: 'prompt for fix darwin permission denied instructions'
         });
         break;
     default:
         instructions = formatMessage({
             id: 'index.permissionDeniedInstructions',
-            default: 'To change OpenBlock permissions, please check your system settings and restart OpenBlock.',
+            default: 'To change VCloudBlock permissions, please check your system settings and restart VCloudBlock.',
             description: 'prompt for fix permission denied instructions'
         });
         break;
@@ -313,9 +313,12 @@ const createLoadingWindow = () => {
 
 const getIsProjectSave = downloadItem => {
     switch (downloadItem.getMimeType()) {
-    case 'application/x.openblock.ob':
-        return true;
-    }
+        case 'application/x-scratch-sb3':
+            return true;
+        }
+    // case 'application/x.openblock.ob':
+    //     return true;
+    // }
     return false;
 };
 
@@ -410,13 +413,13 @@ const createMainWindow = () => {
             type: 'question',
             message: formatMessage({
                 id: 'index.questionLeave',
-                default: 'Leave Openblock?',
-                description: 'prompt for leave Openblock'
+                default: 'Leave VCloudBlock?',
+                description: 'prompt for leave VCloudBlock'
             }),
             detail: formatMessage({
                 id: 'index.questionLeaveDetail',
                 default: 'Any unsaved changes will be lost.',
-                description: 'detail prompt for leave Openblock'
+                description: 'detail prompt for leave VCloudBlock'
             }),
             buttons: [
                 formatMessage({

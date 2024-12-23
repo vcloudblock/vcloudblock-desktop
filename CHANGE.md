@@ -134,7 +134,7 @@
     8. In the upload mode of micropython, the building blocks of custom list variables can generate code.
     9. Optimize and reduce the file size of external resources.
     10. Merge the installation files for the 32-bit and 64-bit versions of the windows version.
-    11. When saving a project without a hardware device, convert it to a format supported by scratch3, so that scratch3 can open the pure scratch project created by openblock. (The save format is still .ob but scratch can be forced to open)
+    11. When saving a project without a hardware device, convert it to a format supported by scratch3, so that scratch3 can open the pure scratch project created by vcloudblock. (The save format is still .ob but scratch can be forced to open)
 
 - **Fix bug**
 
@@ -203,7 +203,7 @@
 
 - **Fix bug**
 
-    1. Because shield in openblock-resource source code is misspelled as sheild, shield filter in GUI interface is null.
+    1. Because shield in vcloudblock-resource source code is misspelled as sheild, shield filter in GUI interface is null.
     2. In VM, one more line of startheartbeat function call is written, and startheartbeat repeats reentry, resulting in real-time communication error.
     3. Add rtscts flow control configuration to repair the situation that some three-party compatible boards cannot be used when opening rtscts flow control.
     4. Cannot edit input-box after the alert or confirm window pops up.
@@ -238,7 +238,7 @@
     1. When loading a project with a extension, an error will be reported and cannot be loaded.
     2. The input box of the variable increase block is parsed incorrectly when other blocks or variables are placed.
     3. In the even sprite, the movement blocks in the toolbox area will not automatically change to the coordinates of the character's current position.
-    4. Fix the problem that esp32 and esp8266 cannot start after clicking the reset button when connecting to openblock due to the lack of serial port to enable dtr rts flow control.
+    4. Fix the problem that esp32 and esp8266 cannot start after clicking the reset button when connecting to vcloudblock due to the lack of serial port to enable dtr rts flow control.
     5. After connecting and disconnecting the device once in upload mode, no matter what mode is connected to the device again, it will not be able to establish communication with the connection firmata.
     6. ESP32 and ESP8266 will get stuck for a long time between compiling and uploading.
 
@@ -288,7 +288,7 @@
 - **Fix bug**
     1. Severe freeze after switching targets several times.
     2. The remote resource update address configuration error caused the program to crash after clicking the Check Update button.
-    3. The remote resource update address incorrectly uses openblockcc instead of the address in the configuration.
+    3. The remote resource update address incorrectly uses vcloudblock instead of the address in the configuration.
     4. When the blocks nested inside the blocks in the toolbox are in the workspace, the internal blocks are erroneously disabled when the disabled state is updated.
     5. An error is reported after opening multiple windows: the address is already in use.
 

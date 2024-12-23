@@ -9,7 +9,7 @@ import formatMessage from 'format-message';
 import parseReleaseMessage from 'vcloudblock-parse-release-message';
 import {UPDATE_TARGET, UPDATE_MODAL_STATE} from 'vcloudblock-gui/src/lib/update-state.js';
 import {AbortController} from 'node-abort-controller';
-class OpenblockDesktopUpdater {
+class VCloudBlockDesktopUpdater {
     constructor (webContents, resourceServer) {
         this._webContents = webContents;
         this._resourceServer = resourceServer;
@@ -108,7 +108,9 @@ class OpenblockDesktopUpdater {
                 });
         });
 
-        autoUpdater.checkForUpdates();
+
+        //close update function - netboy
+        // autoUpdater.checkForUpdates();
     }
 
     reqeustCheckUpdate () {
@@ -158,7 +160,8 @@ class OpenblockDesktopUpdater {
             this.updaterState = UPDATE_MODAL_STATE.checkingResource;
         });
 
-        autoUpdater.checkForUpdates();
+         //close update function - netboy
+        // autoUpdater.checkForUpdates();
         this.updaterState = UPDATE_MODAL_STATE.checkingApplication;
     }
 
@@ -292,4 +295,4 @@ class OpenblockDesktopUpdater {
     }
 }
 
-export default OpenblockDesktopUpdater;
+export default VCloudBlockDesktopUpdater;

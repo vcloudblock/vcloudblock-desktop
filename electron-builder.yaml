@@ -10,10 +10,10 @@ publish:
 artifactName: "VCloudBlock-Desktop_v${version}_${os}_${arch}.${ext}"
 
 fileAssociations:
-  ext: ob
+  ext: SB3
   name: VCloudBlock project file
   role: Editor
-  icon: buildResources/OpenBlockFile.ico
+  icon: buildResources/VCloudBlockFile.ico
 
 mac:
   category: public.app-category.education
@@ -25,7 +25,7 @@ mac:
         This app requires microphone access when recording sounds or detecting loudness.
   gatekeeperAssess: true
   hardenedRuntime: true
-  icon: buildResources/OpenBlockDesktop.icns
+  icon: buildResources/VCloudBlockDesktop.icns
   provisioningProfile: embedded.provisionprofile
   target:
     - dmg
@@ -37,19 +37,19 @@ dmg:
 #   entitlements: buildResources/entitlements.mas.plist
 #   entitlementsInherit: buildResources/entitlements.mas.inherit.plist
 #   hardenedRuntime: false
-#   icon: buildResources/OpenBlockDesktop.icns
+#   icon: buildResources/VCloudBlockDesktop.icns
 # masDev:
 #   type: development
 #   provisioningProfile: mas-dev.provisionprofile
 
 win:
-  icon: buildResources/OpenBlockDesktop.ico
+  icon: buildResources/VCloudBlockDesktop.ico
   target:
     # - appx
     - nsis
 # appx:
-#   identityName: "OpenblockTeam.OpenblockDesktop
-#   publisherDisplayName: "OpenBlock Team"
+#   identityName: "VCloudBlockTeam.VCloudBlockDesktop
+#   publisherDisplayName: "VCloudBlock Team"
 #   publisher: "CN=2EC43DF1-469A-4119-9AB9-568A0A1FF65F"
 nsis:
   oneClick: false # allow user to choose per-user or per-machine
@@ -63,7 +63,7 @@ linux:
   desktop:
     - Encoding: UTF-8
     - Name: VCloudBlockDesktop
-    - Icon: openblock-desktop
+    - Icon: vcloudblock-desktop
     - Type: Application
     - Terminal: false
   target:
